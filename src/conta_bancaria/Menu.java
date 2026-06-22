@@ -4,82 +4,76 @@ import java.util.Scanner;
 
 public class Menu {
 
-	public static void main(String[] args) {
-		
-		
-		Scanner leia = new Scanner(System.in);
-		int opcao;
-		
-		while(true) {
-			System.out.println("************************************************");
-			System.out.println("*                                              *");
-			System.out.println("*    ($$$$)      BANCO DA PRAÇA     ($$$$)     *");
-			System.out.println("*                                              *");
-			System.out.println("************************************************");
-			System.out.println("*                                              *");
-			System.out.println("*           1- Criar Conta                     *");
-			System.out.println("*           2- Listar todas as Contas          *");
-			System.out.println("*           3- Buscar Conta Por Número         *");
-			System.out.println("*           4- Atualizar Dados da Conta        *");
-			System.out.println("*           5- Apagar Conta                    *");
-			System.out.println("*           6- Sacar                           *");
-			System.out.println("*           7- Depositar                       *");
-			System.out.println("*           8- Transferir Valores Entre Contas *");
-			System.out.println("*           0- Sair                            *");
-			System.out.println("*                                              *");
-			System.out.println("************************************************");
-			System.out.println("       Entre com a Opção Desejada:              ");
-			System.out.println("                                                ");
+    public static void main(String[] args) {
 
-			opcao = leia.nextInt();
-			
-			if (opcao == 0) {
-				System.out.println("\n O Banco da Praça Agradece");
-				
-				leia.close();
-				sobre();
-				System.exit(0);
-			}
-			switch(opcao) {
-			case 1:
-				System.out.println("\nCriar uma conta\n");
-				break;
-			case 2:
-				System.out.println("\nListar todas as Contas\n");
-				break;
-			case 3:
-				System.out.println("\nBuscar Conta Por Número\n");
-				break;
-			case 4:
-				System.out.println("\nAtualizar Dados da Conta\n");
-				break;
-			case 5:
-				System.out.println("\nApagar Conta\n");
-				break;
-			case 6:
-				System.out.println("\nSacar\n");
-				break;
-			case 7:
-				System.out.println("\nDepositar\n");
-				break;
-			case 8:
-				System.out.println("\nTransferir Valores Entre Contas\n");
-				break;
-			case 0:
-				System.out.println("\nSair\n");
-				break;
-			}
-		}
-	}
-		public static void sobre() {
-			System.out.println("\n************************************************************************");
-			System.out.println("*                     Projeto Desenvolvido por:                        *");
-			System.out.println("*  Joel da Cunha Ramalho Filho - joelramalho.negociosonline@gmail.com  *");
-			System.out.println("*  GitHub: https://github.com/JoelRamalhoF                             *");
-			System.out.println("*  Muito Obrigao por sua visita :)                                     *");
-			System.out.println("************************************************************************\n");
-		
-		
-	}
-	
+        Scanner leia = new Scanner(System.in);
+        int opcao;
+
+        while (true) {
+
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "************************************************" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*                                              *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*    ($$$$)      BANCO DA PRAÇA     ($$$$)     *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*                                              *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "************************************************" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*                                              *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           1- Criar Conta                     *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           2- Listar todas as Contas          *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           3- Buscar Conta Por Número         *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           4- Atualizar Dados da Conta        *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           5- Apagar Conta                    *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           6- Sacar                           *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           7- Depositar                       *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           8- Transferir Valores Entre Contas *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*           0- Sair                            *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "*                                              *" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "************************************************" + Cores.RESET);
+            System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "Entre com a opção desejada: " + Cores.RESET);
+
+            opcao = leia.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.println(Cores.TEXT_GREEN + "\nCriar uma conta\n" + Cores.RESET);
+                    break;
+                case 2:
+                    System.out.println(Cores.TEXT_GREEN + "\nListar todas as Contas\n" + Cores.RESET);
+                    break;
+                case 3:
+                    System.out.println(Cores.TEXT_GREEN + "\nBuscar Conta Por Número\n" + Cores.RESET);
+                    break;
+                case 4:
+                    System.out.println(Cores.TEXT_GREEN + "\nAtualizar Dados da Conta\n" + Cores.RESET);
+                    break;
+                case 5:
+                    System.out.println(Cores.TEXT_GREEN + "\nApagar Conta\n" + Cores.RESET);
+                    break;
+                case 6:
+                    System.out.println(Cores.TEXT_GREEN + "\nSacar\n" + Cores.RESET);
+                    break;
+                case 7:
+                    System.out.println(Cores.TEXT_GREEN + "\nDepositar\n" + Cores.RESET);
+                    break;
+                case 8:
+                    System.out.println(Cores.TEXT_GREEN + "\nTransferir Valores Entre Contas\n" + Cores.RESET);
+                    break;
+                case 0:
+                    System.out.println(Cores.TEXT_GREEN + "\nO Banco da Praça agradece!" + Cores.RESET);
+                    sobre();
+                    leia.close();
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println(Cores.TEXT_GREEN + "\nOpção inválida!\n" + Cores.RESET);
+                    break;
+            }
+        }
+    }
+
+    public static void sobre() {
+        System.out.println(Cores.TEXT_GREEN + "\n************************************************" + Cores.RESET);
+        System.out.println(Cores.TEXT_GREEN + "* Projeto Desenvolvido por Joel Ramalho        *" + Cores.RESET);
+        System.out.println(Cores.TEXT_GREEN + "* GitHub: github.com/JoelRamalhoF              *" + Cores.RESET);
+        System.out.println(Cores.TEXT_GREEN + "************************************************\n" + Cores.RESET);
+    }
 }
