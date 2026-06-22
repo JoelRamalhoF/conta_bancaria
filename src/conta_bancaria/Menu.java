@@ -2,13 +2,45 @@ package conta_bancaria;
 
 import java.util.Scanner;
 
+import conta_bancaria.model.Conta;
+import conta_bancaria.util.Cores;
+
 public class Menu {
 
     public static void main(String[] args) {
 
         Scanner leia = new Scanner(System.in);
         int opcao;
+        
+        /*Instanciar Objetos da Classe Conta*/
 
+        Conta c1 = new Conta(1, 123, 1, "Joel", 200000.00f);
+       c1.visualizar();
+       
+       Conta c2 = new Conta(2, 123, 2, "Larissa", 2000000.00f);
+       c2.visualizar();
+       
+       /* Alteração do Saldo e nome do Titular*/
+       c1.setSaldo(300000.00f);
+       c1.setTitular("Joel Ramalho");
+       c1.visualizar();
+       
+        /**
+         * if ternario
+         * condição (?) açao se for verdadeiro (:) ação se for falso
+         * 
+         * saque na conta c2
+         * */
+       System.out.println("\nSacar R$ 3.000.000,00 da Conta C2: " + (c2.sacar(3000000.00f) ? "Saque efetuado com Sucesso!" : "Saldo Insuficiente"));
+       System.out.println("\nSacar R$ 3.000.000,00 da Conta C2: " + (c2.sacar(300000.00f) ? "Saque efetuado com Sucesso!" : "Saldo Insuficiente"));
+       c2.visualizar();
+       
+       /*Deposito na conta c2
+        * */
+       c2.depositar(50000.00f);
+       c2.visualizar();
+       
+       
         while (true) {
 
             System.out.println(Cores.BLACK_BACKGROUND + Cores.TEXT_GREEN + "************************************************" + Cores.RESET);
