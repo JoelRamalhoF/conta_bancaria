@@ -31,8 +31,12 @@ public class Menu {
          * 
          * saque na conta c2
          * */
-       System.out.println("\nSacar R$ 3.000.000,00 da Conta C2: " + (c2.sacar(3000000.00f) ? "Saque efetuado com Sucesso!" : "Saldo Insuficiente"));
-       System.out.println("\nSacar R$ 3.000.000,00 da Conta C2: " + (c2.sacar(300000.00f) ? "Saque efetuado com Sucesso!" : "Saldo Insuficiente"));
+       System.out.println("\nSacar R$ 3.000.000,00 da Conta C2: " + (c2.sacar(3000000.00f) ? 
+    		   "Saque efetuado com Sucesso!" : "Saldo Insuficiente"));
+       
+       System.out.println("\nSacar R$ 3.000.000,00 da Conta C2: " + (c2.sacar(300000.00f) ? 
+    		   "Saque efetuado com Sucesso!" : "Saldo Insuficiente"));
+       
        c2.visualizar();
        
        /*Deposito na conta c2
