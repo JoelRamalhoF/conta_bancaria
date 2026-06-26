@@ -15,6 +15,8 @@ public interface ContaRepository {
 
 	public void deletar(int numero);
 
+	public void listarPorTitular(String titular);
+
 	// Métodos bancários
 	public void sacar(int numero, float valor);
 
