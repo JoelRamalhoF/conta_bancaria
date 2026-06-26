@@ -1,13 +1,13 @@
 package conta_bancaria.model;
 
-public class Conta {
-	
+public abstract class Conta {
+
 	private int numero;
 	private int agencia;
 	private int tipo;
 	private String titular;
 	private float saldo;
-	
+
 	/* Método Contrutor responsavel por gerar instancias (objetos) da classe */
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
@@ -17,12 +17,14 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
-	public Conta() {}
+	public Conta() {
+	}
 
 	public int getNumero() {
 		return numero;
 	}
-/* Métodos Get (visualizar os dados) e Set (Modificar os dados)*/
+
+	/* Métodos Get (visualizar os dados) e Set (Modificar os dados) */
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
@@ -58,30 +60,31 @@ public class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
-	
+
 	// Métodos Auxiliares
-	
+
 	public boolean sacar(float valor) {
 		if (this.saldo < valor)
 			return false;
 		this.saldo -= valor;
 		return true;
 	}
-	
+
 	public void depositar(float valor) {
 		this.saldo += valor;
 	}
+
 	public void visualizar() {
-		
+
 		String tipo = "";
-		switch(this.tipo) {
-			case 1:
-				tipo = "Conta Corrente";
-				break;
-			case 2:
-				tipo = "Conta Poupança";
-				break;
-			
+		switch (this.tipo) {
+		case 1:
+			tipo = "Conta Corrente";
+			break;
+		case 2:
+			tipo = "Conta Poupança";
+			break;
+
 		}
 		System.out.println("****************************************");
 		System.out.println("*           DADOS DA CONTA             *");
@@ -92,5 +95,5 @@ public class Conta {
 		System.out.printf("Nome do Titular: %s%n", this.titular);
 		System.out.printf("Saldo da Conta: %.2f%n", this.saldo);
 	}
-	
+
 }
